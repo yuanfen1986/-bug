@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- MIUIX 主色调：橙色 -->
+    <color name="miui_orange">#FF6B35</color>
+    <color name="miui_orange_light">#FFF5ED</color>
+    <color name="miui_orange_dark">#E55A2B</color>
+
+    <!-- 蓝灰色（用于Shizuku卡片） -->
+    <color name="miui_blue">#4A90D9</color>
+    <color name="miui_blue_light">#EDF4FC</color>
+
+    <!-- 背景和文字 -->
+    <color name="bg_main">#F5F5F5</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#8E8E93</color>
+    <color name="text_hint">#B0B0B0</color>
+
+    <!-- 状态 -->
+    <color name="status_enabled">#34C759</color>
+    <color name="status_disabled">#FF3B30</color>
+    <color name="divider">#F0F0F0</color>
+</resources>

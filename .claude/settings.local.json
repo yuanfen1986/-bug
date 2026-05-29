@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find D:Android_idashielddogbug -type f -not -path */.gradle/* -not -path */.idea/* -not -path */gradle/* -not -path */build/*)",
+      "Bash(./gradlew assembleDebug)",
+      "WebFetch(domain:shizuku.rikka.app)",
+      "WebSearch",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s --max-time 15 \"https://api.github.com/repos/RikkaApps/Shizuku/releases/latest\")",
+      "Read(//tmp/**)",
+      "Bash(jar tf:*)",
+      "Bash(javap -public -classpath classes.jar rikka.shizuku.ShizukuRemoteProcess)",
+      "Bash(javap -public -classpath classes.jar rikka.sui.Sui)",
+      "Bash(javap -public -classpath classes.jar moe.shizuku.server.IRemoteProcess)",
+      "Bash(javap -public -classpath classes.jar 'rikka.shizuku.ShizukuBinderWrapper')",
+      "Bash(./gradlew :app:dependencies --configuration debugCompileClasspath)",
+      "Read(//d/Android_ida/shielddogbug/$HOME/**)",
+      "Read(//d/Android_ida/shielddogbug/**)",
+      "Bash(javap -cp api_content/classes.jar rikka.shizuku.Shizuku)",
+      "Bash(javap -cp api_content/classes.jar 'rikka.shizuku.Shizuku$UserServiceArgs')",
+      "Bash(D:/Android_ida/shielddogbug/.gitignore:*)"
+    ]
+  }
+}
