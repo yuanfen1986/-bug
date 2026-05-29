@@ -57,6 +57,7 @@
                 android:id="@+id/card_normal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:minHeight="112dp"
                 android:layout_marginTop="16dp"
                 app:cardBackgroundColor="@color/card_bg"
                 app:cardCornerRadius="16dp"
@@ -110,6 +111,7 @@
                 android:id="@+id/card_shizuku"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:minHeight="112dp"
                 android:layout_marginTop="16dp"
                 app:cardBackgroundColor="@color/card_bg"
                 app:cardCornerRadius="16dp"
@@ -158,19 +160,75 @@
 
         </androidx.cardview.widget.CardView>
 
+        <!-- 卡片3: 特定断网模式 -->
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card_disconnect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="112dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/card_bg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:contentPadding="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_shizuku">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv_disconnect_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mode_disconnect_title"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/tv_disconnect_desc" />
+
+                <TextView
+                        android:id="@+id/tv_disconnect_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/mode_disconnect_desc"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_secondary"
+                        android:lineSpacingExtra="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_disconnect_title"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
         <!-- 底部注释 -->
         <TextView
+                android:id="@+id/tv_hint"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="提示：普通模式在 Android 10+ 上切换网络需要额外授权"
+                android:text="提示：VPN断网模式会阻断所有应用联网，关闭后自动恢复"
                 android:textSize="12sp"
                 android:textColor="@color/text_hint"
                 android:gravity="center"
                 android:lineSpacingExtra="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_shizuku" />
+                app:layout_constraintTop_toBottomOf="@id/card_disconnect" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

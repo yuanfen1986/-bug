@@ -34,4 +34,16 @@
     <!-- Toast -->
     <string name="toast_coming_soon">Shizuku模式即将推出，敬请期待</string>
     <string name="toast_no_overlay">请先授予悬浮窗权限</string>
+
+    <!-- VPN 断网模式 -->
+    <string name="mode_disconnect_title">VPN断网模式</string>
+    <string name="mode_disconnect_desc">通过VPN虚拟网卡接管所有流量\n读取后直接丢弃实现全局断网\n兼容所有设备，无需ROOT或Shizuku</string>
+    <string name="disconnect_enable">开启</string>
+    <string name="disconnect_select_pkg">选择包名</string>
+    <string name="disconnect_selected">已选择</string>
+    <string name="disconnect_none">未选择</string>
+    <string name="app_list_title">选择应用</string>
+    <string name="app_list_user_apps">用户应用</string>
+    <string name="app_list_system_apps">系统应用</string>
+    <string name="app_list_search_hint">搜索应用名或包名</string>
 </resources>

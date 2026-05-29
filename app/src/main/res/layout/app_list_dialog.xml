@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- 顶部栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/card_bg"
+        android:elevation="2dp"
+        android:paddingHorizontal="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_app_list_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            android:contentDescription="返回"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="@string/app_list_title"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
+
+    <!-- 搜索 + 标签卡片 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:contentPadding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 搜索栏 -->
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:hint="@string/app_list_search_hint"
+                android:textSize="13sp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:background="@drawable/bg_rounded"
+                android:backgroundTint="@color/bg_main"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:maxLines="1"
+                android:importantForAutofill="no" />
+
+            <!-- 标签栏：用户应用 / 系统应用 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tab_user_apps"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/app_list_user_apps"
+                    android:textSize="12sp"
+                    android:textColor="@color/card_bg"
+                    android:background="@drawable/bg_rounded"
+                    android:backgroundTint="@color/accent_primary"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground" />
+
+                <TextView
+                    android:id="@+id/tab_system_apps"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:gravity="center"
+                    android:text="@string/app_list_system_apps"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:background="@drawable/bg_rounded"
+                    android:backgroundTint="@color/bg_main"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 应用列表 + 加载转圈 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_app_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="4dp"
+            android:paddingBottom="4dp" />
+
+        <ProgressBar
+            android:id="@+id/loading_apps"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>
