@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme - MIUIX风格 -->
+    <style name="Base.Theme.盾构bug" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/miui_orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/miui_orange_light</item>
+        <item name="colorOnPrimaryContainer">@color/miui_orange_dark</item>
+        <item name="colorSecondary">@color/miui_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">#D0D0D0</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowBackground">@color/bg_main</item>
+    </style>
+
+    <style name="Theme.盾构bug" parent="Base.Theme.盾构bug"/>
+
+    <!-- MIUIX Dialog 样式 -->
+    <style name="Theme.盾构bug.Dialog" parent="ThemeOverlay.Material3.Dialog">
+        <item name="colorPrimary">@color/miui_orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/miui_orange_light</item>
+        <item name="colorOnPrimaryContainer">@color/miui_orange_dark</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

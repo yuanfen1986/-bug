@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">盾构bug</string>
+    <string name="app_subtitle">网络控制工具</string>
+
+    <!-- 主界面 -->
+    <string name="mode_normal_title">普通模式</string>
+    <string name="mode_normal_desc">使用系统API控制网络\n无需额外权限服务</string>
+    <string name="mode_shizuku_title">Shizuku模式</string>
+    <string name="mode_shizuku_desc">通过Shizuku服务调用\n系统级网络控制接口</string>
+    <string name="mode_shizuku_coming_soon">即将推出</string>
+
+    <!-- 权限相关 -->
+    <string name="perm_overlay_title">需要悬浮窗权限</string>
+    <string name="perm_overlay_msg">请在设置中开启\"显示在其他应用的上层\"权限，以启用悬浮控制按钮</string>
+    <string name="perm_overlay_btn">去开启</string>
+    <string name="perm_denied">权限被拒绝，无法启动悬浮窗</string>
+
+    <!-- 悬浮窗 -->
+    <string name="floating_wifi_on">WiFi已开启</string>
+    <string name="floating_wifi_off">WiFi已关闭</string>
+    <string name="floating_data_on">数据网络已开启</string>
+    <string name="floating_data_off">数据网络已关闭</string>
+    <string name="floating_wifi_fail">WiFi切换失败，需要系统级权限</string>
+    <string name="floating_data_fail">数据网络切换失败，需要Shizuku模式</string>
+    <string name="floating_exit">长按退出悬浮模式</string>
+    <string name="floating_btn_exit">退出悬浮</string>
+
+    <!-- 通知 -->
+    <string name="channel_name">悬浮控制服务</string>
+    <string name="channel_desc">用于显示网络控制悬浮按钮</string>
+    <string name="notification_text">网络控制悬浮按钮已启动</string>
+
+    <!-- Toast -->
+    <string name="toast_coming_soon">Shizuku模式即将推出，敬请期待</string>
+    <string name="toast_no_overlay">请先授予悬浮窗权限</string>
+</resources>
