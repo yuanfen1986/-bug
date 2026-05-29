@@ -9,6 +9,10 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
 
+    <!-- 查询所有已安装应用（Android 11+） -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
     <!-- 网络控制 -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -45,6 +49,17 @@
             <property
                     android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                     android:value="floating_network_toggle"/>
+        </service>
+
+        <!-- VpnService 断网（前台服务，防止 VIVO 等 OEM 杀服务） -->
+        <service
+                android:name=".BlockVpnService"
+                android:exported="false"
+                android:foregroundServiceType="specialUse"
+                android:permission="android.permission.BIND_VPN_SERVICE">
+            <property
+                    android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                    android:value="vpn_network_block" />
         </service>
 
         <!-- Shizuku Provider -->
